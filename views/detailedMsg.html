@@ -1,0 +1,18 @@
+<div>
+    <br>
+    <div id="{{message._id}}">
+        <h5>From: {{message.sender}}</h5>
+        <p>Title: {{message.title}}
+            <br> Description: {{message.description}}
+        </p>
+        Replys: <br>
+                <p ng-repeat="reply in message.replys">{{reply}}</p>
+        <button id="{{message._id}}" ng-class="favtrue ? 'btn btn-success' : 'btn'" ng-click="favorite($event)">Favourite</button>
+        <button id="{{message._id}}" class="btn" ng-click="delete($event)">Delete</button>
+        <button id="{{message._id}}" class="btn" ng-click="replyOn?replyOn=false:replyOn=true">Reply</button>
+        <div id="reply" ng-show="replyOn">
+            <input type="text" ng-model="newreply" name="reply"/>
+            <button id="{{message._id}}" ng-click="sendmessage($event)">Send</button>
+        </div>
+    </div>
+</div>

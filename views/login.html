@@ -1,0 +1,10 @@
+<form>
+
+  <br><h1 >Login to your account </h1><br>
+
+        username:<input type="text" ng-model="loginform.username" name="username"/><br><br/>
+        password:<input type="text" ng-model="loginform.password"name="password"/><br><br/>
+        <button type="button" ng-click="login()">Login</button><br>
+        <p ng-if="incorrect">Please check entered credentials.</p>
+
+</form>

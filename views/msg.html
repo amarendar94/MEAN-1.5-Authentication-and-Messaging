@@ -1,0 +1,11 @@
+<div> 
+    <h1>messages</h1>
+
+    <div ng-repeat="message in messages" >
+      <a href="/#/detailmsg/{{message._id}}">
+        <h5>From: {{message.sender}}</h5>
+        <p>{{message.title}}</p>
+        <p>{{message.description}}</p>
+        <br></a>
+    </div>
+</div>
